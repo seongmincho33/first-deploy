@@ -1,4 +1,4 @@
-# NVM
+# NVM 
 
 1. 이전에 설치한 Nodejs는 윈도우 용임. 우분투에 다시 설치해야함.
 2. Nodejs를 설치하려면 nvm을 먼저 설치해야함 아래 명령어실행
@@ -61,7 +61,7 @@ nvm install --lts
 <br>
 <br>
 <br>
-
+seongmin
 ---
 
 
