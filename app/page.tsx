@@ -1,103 +1,57 @@
 import Image from "next/image";
 
-export default function Home() {
+// 서버 컴포넌트에서 직접 API 호출
+async function getGeneralInfo() {
+  const res = await fetch('https://raw.githubusercontent.com/seongmincho33/first-deploy/refs/heads/main/service/resume_general_info_service.json');
+  // API 응답이 성공적인지 확인
+  if (!res.ok) {
+    // 응답이 실패하면 오류를 던져 Next.js가 오류 페이지를 보여주도록 함
+    throw new Error('Failed to fetch data');
+  }
+  return res.json();
+}
+
+// 서버 컴포넌트에서 직접 API 호출
+async function getPortfolioInfo() {
+  const res = await fetch('https://raw.githubusercontent.com/seongmincho33/first-deploy/refs/heads/main/service/resume_portfolio_service.json');
+  // API 응답이 성공적인지 확인
+  if (!res.ok) {
+    // 응답이 실패하면 오류를 던져 Next.js가 오류 페이지를 보여주도록 함
+    throw new Error('Failed to fetch data');
+  }
+  return res.json();
+}
+
+export default async function Home() {
+  // getResumeInfo 함수를 호출하여 데이터를 기다림
+  const dataGeneral = await getGeneralInfo();
+  const dataPortfolio = await getPortfolioInfo();
+  console.log('General Info:', dataGeneral);
+  console.log('Portfolio Info:', dataPortfolio);
+
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
-          src="/mushroom.jpg"
+          src="/diginori_logo.png"
           alt="Next.js logo"
-          width={180}
+          width={333}
           height={38}
           priority
         />
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
-            안녕하세요 조성민입니다~~! 'ㅁ'{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
+            안녕하세요{" "} {dataGeneral.name} 입니다.
+            제 깃허브 아이디는 {" "} {dataGeneral.github_id} 입니다.
+            {dataGeneral.introduce}
           </li>
           <li className="tracking-[-.01em]">
-            테스트 할 수 없는건 할수가 없다.
+            제가 만들었던 프로젝트는 {" "} {dataPortfolio.project_name} 입니다.
+            프로젝트는 {" "} {dataPortfolio.project_info} 입니다.
           </li>
         </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
