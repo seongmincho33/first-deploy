@@ -1,0 +1,102 @@
+[
+    {
+        "id": "model-converter-tekla",
+        "title": "Tekla Structures 전용 컨버터 모듈 개발",
+        "summary": "Tekla 모델 데이터를 표준 포맷으로 변환하는 독립 실행형 애플리케이션 개발.",
+
+        "period": "2020.01 ~ 2025.04 (00개월)",
+        "role": "핵심 개발자",
+        "contribution": "Tekla API 통합 및 데이터 최적화 모듈 개발.",
+        "backend_tech": ["C#", ".NET Core", "SQL Server"],
+        "frontend_tech": ["Next.js (이직 후 목표)", "React (향후 기여 목표)"],
+        "tools": ["Tekla API", "Visual Studio", "MS Teams", "Notion"],
+
+        "description_points": [
+            "Foudnation 컨버팅 : ",
+            "Underground Drinage 모델 컨버팅 : "
+        ],
+
+        "image_path": "/images/bim/TeklaFoundation.png",
+        "external_link": "https://github.com/your-repo/tekla-converter"
+    },
+    {
+        "id": "model-converter-s3d",
+        "title": "S3D 전용 컨버터 모듈 개발",
+        "summary": "S3D 모델 데이터를 표준 포맷으로 변환하는 독립 실행형 애플리케이션 개발.",
+
+        "period": "2020.01 ~ 2025.04 (00개월)",
+        "role": "핵심 개발자",
+        "contribution": "S3D API 통합 및 데이터 최적화 모듈 개발.",
+        "backend_tech": ["C#", ".NET Core", "SQL Server"],
+        "frontend_tech": ["Devexpress, infragistics", "Durid"],
+        "tools": ["S3D API", "Visual Studio", "MS Teams", "Notion"],
+
+        "description_points": [
+            "자체 회사 모델의 CIVIL 객체 컨버팅 및 생성",
+            "- Pipe, Catchbasin, Manhole, Openditch"
+        ],
+
+        "image_path": "/images/bim/S3DFoundation.png",
+        "external_link": "https://github.com/your-repo/tekla-converter"
+    },
+    {
+        "id": "model-converter-revit",
+        "title": "Revit 전용 컨버터 모듈 개발",
+        "summary": "Revit 모델 데이터를 표준 포맷으로 변환하는 독립 실행형 애플리케이션 개발.",
+
+        "period": "2020.01 ~ 2025.04 (00개월)",
+        "role": "핵심 개발자",
+        "contribution": "Revit API 통합 및 데이터 최적화 모듈 개발.",
+        "backend_tech": ["C#", ".NET Core", "SQL Server"],
+        "frontend_tech": ["Devexpress"],
+        "tools": ["Revit API", "Visual Studio", "MS Teams", "Notion"],
+
+        "description_points": [
+            "자체 회사 모델의 CIVIL 객체 컨버팅 및 생성",
+            "- Pipe, Catchbasin, Manhole, Openditch"
+        ],
+
+        "image_path": "/images/bim/RevitFoundation.png",
+        "external_link": "https://github.com/your-repo/tekla-converter"
+    },
+    {
+        "id": "model-converter-pdms",
+        "title": "PDMS(구 E3D) 전용 컨버터 모듈 개발",
+        "summary": "PDMS 모델 데이터를 표준 포맷으로 변환하는 독립 실행형 애플리케이션 개발.",
+
+        "period": "2020.01 ~ 2025.04 (00개월)",
+        "role": "핵심 개발자",
+        "contribution": "PDMS API 통합 및 데이터 최적화 모듈 개발.",
+        "backend_tech": ["C#", ".NET Core", "SQL Server"],
+        "frontend_tech": ["Devexpress"],
+        "tools": ["PDMS API", "Visual Studio", "MS Teams", "Notion"],
+
+        "description_points": [
+            "자체 회사 모델의 CIVIL 객체 컨버팅 및 생성",
+            "- Pipe, Catchbasin, Manhole, Openditch"
+        ],
+
+        "image_path": "/images/bim/PDMSFoundation.png",
+        "external_link": "https://github.com/your-repo/tekla-converter"
+    },
+    {
+        "id": "model-converter-e3d",
+        "title": "E3D 전용 컨버터 모듈 개발",
+        "summary": "E3D 모델 데이터를 표준 포맷으로 변환하는 독립 실행형 애플리케이션 개발.",
+
+        "period": "2020.01 ~ 2025.04 (00개월)",
+        "role": "핵심 개발자",
+        "contribution": "E3D API 통합 및 데이터 최적화 모듈 개발.",
+        "backend_tech": ["C#", ".NET Core", "SQL Server"],
+        "frontend_tech": ["Devexpress"],
+        "tools": ["E3D API", "Visual Studio", "MS Teams", "Notion"],
+
+        "description_points": [
+            "자체 회사 모델의 CIVIL 객체 컨버팅 및 생성",
+            "- Pipe, Catchbasin, Manhole, Openditch"
+        ],
+
+        "image_path": "/images/bim/E3DFoundation.png",
+        "external_link": "https://github.com/your-repo/tekla-converter"
+    }
+]

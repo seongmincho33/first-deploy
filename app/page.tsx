@@ -1,57 +1,28 @@
-import Image from "next/image";
+// app/page.tsx (수정 및 정리 완료)
 
-import { createClient } from "@supabase/supabase-js";
+// Note: Header, Footer는 app/layout.tsx에서 전역적으로 관리되므로,
+//       이 파일에서는 import하지 않습니다.
+//       Image 컴포넌트는 사용하지 않으므로 import에서 제거합니다.
+import HeroSection from "../components/HeroSection"; // HeroSection 컴포넌트 import
+import KeyMetrics from "../components/KeyMetrics"; // KeyMetrics 컴포넌트 import
 
-// 1. 환경 변수를 불러와요
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL as string;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string;
-
-// 2. 클라이언트 객체를 생성해요
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-export type Resume = {
-    id: number;
-    name: string;
-    description: string | null;
-};
-
-const getResumeById = async (resumeId: number): Promise<Resume | null> => {
-    const { data, error } = await supabase
-        .from("resume")
-        .select("*")
-        .eq("id", resumeId)
-        .single<Resume>(); // 👈 타입을 명시하여, 반환되는 데이터가 Resume 형태임을 알려줘요.
-
-    if (error) {
-        console.error("앗, Supabase 쿼리 에러 발생:", error.message);
-        // 🥶 냉정한 판단: 에러가 발생하면 null을 반환하여 데이터가 없음을 알려줍니다.
-        return null;
-    }
-
-    return data;
-};
-
-export default async function Home() {
-    // getResumeInfo 함수를 호출하여 데이터를 기다림
-
-    const RESUME_ID = 1; // 👈 우리가 가져오고 싶은 ID 값
-    const resume = await getResumeById(RESUME_ID);
-
+// Next.js App Router의 Server Component (SSG에 유리)
+// 이 컴포넌트는 모든 페이지에 공통적으로 적용되는 Layout의 {children} 자리에 렌더링됩니다.
+export default function HomePage() {
     return (
-        <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-            <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-                <Image
-                    className="dark:invert"
-                    src="/mushroom.jpg"
-                    alt="Next.js logo"
-                    width={333}
-                    height={38}
-                    priority
-                />
-                superbase test
-                {resume?.id}
-                {resume?.description}
-            </main>
-        </div>
+        // main 태그 내부의 flex-grow가 부모인 layout의 flex-col과 함께 작동합니다.
+        // min-h-screen이나 flex-col 같은 전역 스타일은 layout.tsx에서 처리되는 것이 더 좋습니다.
+        <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            {/* Hero Section: 명함이자 핵심 소개 (상위 컴포넌트에서 재구성된 내용) */}
+            <HeroSection />
+
+            {/* --- */}
+
+            {/* Key Metrics: 주요 성과 요약 (상위 컴포넌트에서 재구성된 내용) */}
+            <KeyMetrics />
+
+            {/* 💡 여기에 프로젝트 목록의 일부를 카드 형태로 요약하여 추가할 수 있습니다. */}
+            {/* <ProjectSummaryList /> */}
+        </main>
     );
 }
