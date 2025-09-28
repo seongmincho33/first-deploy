@@ -51,17 +51,6 @@ export default async function Home() {
                 superbase test
                 {resume?.id}
                 {resume?.description}
-                {/* <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-                    <li className="mb-2 tracking-[-.01em]">
-                        안녕하세요 {dataGeneral.name} 입니다. 제 깃허브 아이디는{" "}
-                        {dataGeneral.github_id} 입니다.
-                        {dataGeneral.introduce}
-                    </li>
-                    <li className="tracking-[-.01em]">
-                        제가 만들었던 프로젝트는 {dataPortfolio.project_name}{" "}
-                        입니다. 프로젝트는 {dataPortfolio.project_info} 입니다.
-                    </li>
-                </ol> */}
             </main>
         </div>
     );
