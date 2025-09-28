@@ -26,14 +26,12 @@ body {
 }
 
 @keyframes moveBackground {
-    /* 0% (시작): 오른쪽에서 시작 (0vw) */
     from {
         transform: translateX(0);
     }
-    /* 100% (끝): 이미지 묶음의 절반 폭만큼 왼쪽으로 이동 (-150vw) */
-    /* w-[300vw]로 설정했으므로, -150vw 이동해야 끊기지 않고 자연스럽게 반복됩니다. */
+    /* ⭐️ to: 한 묶음의 너비(2240px)만큼 이동합니다. */
     to {
-        transform: translateX(-150vw);
+        transform: translateX(-2240px);
     }
 }
 
@@ -47,7 +45,7 @@ body {
     animation-play-state: running; /* 마우스 오버 시 재생 */
 }
 
-/* 💡 HeroSection이 마운트되면 자동으로 재생하고 싶다면 'paused'를 'running'으로 변경합니다. */
 .animate-move-bg-auto {
-    animation: moveBackground 45s linear infinite running; /* 자동 재생 */
+    /* 45s 동안 선형(linear) 속도로 무한히(infinite) 재생(running) */
+    animation: moveBackground 45s linear infinite running;
 }

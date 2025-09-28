@@ -16,14 +16,15 @@ export default function HeroSection() {
                     <span className="text-indigo-600 inline-flex items-center">
                         테스트
                     </span>{" "}
-                    할수 없는것은
-                    <br />
-                    <span className="text-blue-700">개발</span>
-                    할수 없습니다 'ㅁ'
+                    할 수 없는것은
+                    <span className="text-blue-700"> 개발 </span>할 수 없습니다
+                    'ㅁ'
                 </h1>
 
                 {/* 서브 설명 1 유지 */}
-                <p>하지만 하라면 열심히 합니다 ㅎ.ㅎ....</p>
+                <p>
+                    <b>하지만 하라면 열심히 합니다 ㅎ.ㅎ....</b>
+                </p>
 
                 {/* ⭐️ 1. 프로필 사진 영역 추가 */}
                 <div className="mt-8 mb-8 flex justify-center">
@@ -40,13 +41,14 @@ export default function HeroSection() {
                     </div>
                 </div>
 
-                {/* 서브 설명 2 유지 */}
-                <p className="text-xl text-gray-600 mb-10 max-w-4xl mx-auto">
-                    한성대학교 IT응용시스템 공학과를 졸업하고, 3년 6개월 경력의
-                    C# 개발자로서 <br />
-                    3D 객체 프로그래밍과 BIM 모델링에 특화된 솔루션을
-                    제공했습니다.
-                </p>
+                {/* ⭐️ 텍스트 가독성을 위한 배경 블록 추가 */}
+                <div className="flex justify-center mb-10">
+                    {/* 서브 설명 2 유지 */}
+                    <p className="text-xl text-gray-600 max-w-4xl mx-auto bg-white/90 p-4 sm:p-6 rounded-xl shadow-lg backdrop-blur-sm">
+                        3년 6개월 경력의 C# 개발자로서 3D 객체 프로그래밍과 BIM
+                        모델링에 특화된 솔루션을 제공했습니다.
+                    </p>
+                </div>
 
                 {/* CTA (Call-to-Action) 버튼 그룹 유지 */}
                 <div className="flex justify-center space-x-4">

@@ -1,5 +1,25 @@
 [
     {
+        "id": "model-converter-revit",
+        "title": "Revit 전용 컨버터 모듈 개발",
+        "summary": "Revit 모델 데이터를 표준 포맷으로 변환하는 독립 실행형 애플리케이션 개발.",
+
+        "period": "2020.01 ~ 2025.04 (00개월)",
+        "role": "핵심 개발자",
+        "contribution": "Revit API 통합 및 데이터 최적화 모듈 개발.",
+        "backend_tech": ["C#", ".NET Core", "SQL Server"],
+        "frontend_tech": ["Devexpress"],
+        "tools": ["Revit API", "Visual Studio", "MS Teams", "Notion"],
+
+        "description_points": [
+            "자체 회사 모델의 CIVIL 객체 컨버팅 및 생성",
+            "- Pipe, Catchbasin, Manhole, Openditch"
+        ],
+
+        "image_path": "/images/bim/RevitFoundation.png",
+        "external_link": "https://github.com/your-repo/tekla-converter"
+    },
+    {
         "id": "model-converter-tekla",
         "title": "Tekla Structures 전용 컨버터 모듈 개발",
         "summary": "Tekla 모델 데이터를 표준 포맷으로 변환하는 독립 실행형 애플리케이션 개발.",
@@ -39,26 +59,7 @@
         "image_path": "/images/bim/S3DFoundation.png",
         "external_link": "https://github.com/your-repo/tekla-converter"
     },
-    {
-        "id": "model-converter-revit",
-        "title": "Revit 전용 컨버터 모듈 개발",
-        "summary": "Revit 모델 데이터를 표준 포맷으로 변환하는 독립 실행형 애플리케이션 개발.",
 
-        "period": "2020.01 ~ 2025.04 (00개월)",
-        "role": "핵심 개발자",
-        "contribution": "Revit API 통합 및 데이터 최적화 모듈 개발.",
-        "backend_tech": ["C#", ".NET Core", "SQL Server"],
-        "frontend_tech": ["Devexpress"],
-        "tools": ["Revit API", "Visual Studio", "MS Teams", "Notion"],
-
-        "description_points": [
-            "자체 회사 모델의 CIVIL 객체 컨버팅 및 생성",
-            "- Pipe, Catchbasin, Manhole, Openditch"
-        ],
-
-        "image_path": "/images/bim/RevitFoundation.png",
-        "external_link": "https://github.com/your-repo/tekla-converter"
-    },
     {
         "id": "model-converter-pdms",
         "title": "PDMS(구 E3D) 전용 컨버터 모듈 개발",
@@ -97,6 +98,66 @@
         ],
 
         "image_path": "/images/bim/E3DFoundation.png",
+        "external_link": "https://github.com/your-repo/tekla-converter"
+    },
+    {
+        "id": "model-converter-bearingcapacity",
+        "title": "기초지지력자동화",
+        "summary": "땅의 지반의 지지력을 자동으로 계산하는 독립 실행형 애플리케이션 개발.",
+
+        "period": "2020.01 ~ 2025.04 (00개월)",
+        "role": "모듈 개발자",
+        "contribution": "기초 지지력 계산 프로그램 유지보수 및 기능 개선.",
+        "backend_tech": ["C#", ".NET Core", "SQL Server"],
+        "frontend_tech": ["Devexpress"],
+        "tools": ["E3D API", "Visual Studio", "MS Teams", "Notion"],
+
+        "description_points": [
+            "자체 회사 모델의 CIVIL 객체 컨버팅 및 생성",
+            "- Pipe, Catchbasin, Manhole, Openditch"
+        ],
+
+        "image_path": "/images/bim/BearingCapacity.png",
+        "external_link": "https://github.com/your-repo/tekla-converter"
+    },
+    {
+        "id": "model-converter-erp",
+        "title": "자재 합성버팀보 ERP",
+        "summary": "자재 합성버팀보의 생산, 재고, 출하를 관리하는 ERP 시스템 개발.",
+
+        "period": "2020.01 ~ 2025.04 (00개월)",
+        "role": "유지보수 개발자",
+        "contribution": "기초 지지력 계산 프로그램 유지보수 및 기능 개선.",
+        "backend_tech": ["C#", ".NET Core", "SQL Server"],
+        "frontend_tech": ["Devexpress"],
+        "tools": ["E3D API", "Visual Studio", "MS Teams", "Notion"],
+
+        "description_points": [
+            "자체 회사 모델의 CIVIL 객체 컨버팅 및 생성",
+            "- Pipe, Catchbasin, Manhole, Openditch"
+        ],
+
+        "image_path": "/mushroomsecure.png",
+        "external_link": "https://github.com/your-repo/tekla-converter"
+    },
+    {
+        "id": "model-converter-awp",
+        "title": "현대 엔지니어링 AWP 시스템 유지보수 (하청)",
+        "summary": "현대 엔지니어링의 AWP(Advanced Work Packaging) 시스템의 유지보수 및 기능 개선.",
+
+        "period": "2020.01 ~ 2025.04 (00개월)",
+        "role": "유지보수 개발자",
+        "contribution": "AWP 시스템 기능개발",
+        "backend_tech": ["C#", ".NET Core", "SQL Server"],
+        "frontend_tech": ["Devexpress"],
+        "tools": ["E3D API", "Visual Studio", "MS Teams", "Notion"],
+
+        "description_points": [
+            "자체 회사 모델의 CIVIL 객체 컨버팅 및 생성",
+            "- Pipe, Catchbasin, Manhole, Openditch"
+        ],
+
+        "image_path": "/mushroomsecure.png",
         "external_link": "https://github.com/your-repo/tekla-converter"
     }
 ]

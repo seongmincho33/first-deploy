@@ -12,10 +12,15 @@ const projectImages = [
 ];
 
 export default function MovingBackground() {
+    const oneSetWidth = 2240;
+    const containerWidth = oneSetWidth * 2; // 총 4480px
     return (
         <div className="absolute inset-0 z-0 opacity-50 overflow-hidden">
-            {/* ⭐️ 클래스 변경: animate-move-bg 대신 animate-move-bg-auto 사용 */}
-            <div className="w-[300vw] h-full absolute top-0 animate-move-bg-auto">
+            {/* ⭐️ w-[300vw] 대신 w-[4480px]와 같은 실제 픽셀 너비를 사용합니다. */}
+            <div
+                className="h-full absolute top-0 animate-move-bg-auto"
+                style={{ width: `${containerWidth}px` }} // 픽셀로 명확하게 너비 지정
+            >
                 <div className="flex h-full items-center">
                     {/* 이미지 리스트를 반복하여 무한 반복 시 끊김 없이 연결되게 합니다. */}
                     {[...projectImages, ...projectImages].map((path, index) => (

@@ -7,13 +7,14 @@ const metrics = [
     },
     {
         label: "프로젝트 경험",
-        value: "+3",
-        description: "BIM 컨버팅 모듈, 합성버팀보 ERP",
+        value: "+4",
+        description:
+            "BIM 컨버터, 합성버팀보 ERP, AWP 시스템, 기초지지력자동화 등",
     },
     {
-        label: "최적화 기여",
-        value: "90+ 점",
-        description: "Lighthouse 성능 최적화 경험 보유",
+        label: "현재 상태",
+        value: "LG CNS AM INSPIRE 3기",
+        description: "부트캠프 수학 진행중...",
     },
 ];
 
